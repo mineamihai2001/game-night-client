@@ -1,6 +1,3 @@
-import { Color } from "../modules";
-
-const Groups = () => {
+export const Groups = () => {
     return <div></div>;
 };
-export default Groups;

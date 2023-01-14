@@ -1,10 +1,21 @@
-import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import { GroupDetails, Groups } from "./pages";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        children: [
+            {
+                path: "/groups",
+                element: <Groups />,
+            },
+            {
+                path: "/group/:id",
+                element: <GroupDetails />,
+            },
+        ],
     },
 ]);
 
