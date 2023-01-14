@@ -1,6 +1,20 @@
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ReactElement, useState } from "react";
 import { Link } from "react-router-dom";
+import { Color } from "../../modules";
+
+const Title = () => {
+    const title: string = "Game Night";
+    return (
+        <>
+            {[...title].map((letter, index) => {
+                const color = new Color().color;
+                return <span className={color.text} key={index}>{letter}</span>;
+            })}
+        </>
+    );
+};
 
 const Navbar = () => {
     return (
@@ -13,7 +27,7 @@ const Navbar = () => {
                         font-black border-b-4 border-gray-700 
                         transform transition-all duration-500 "
                     >
-                        GameNight
+                        <Title />
                     </Link>
                 </div>
                 <div id="nav-user" className="w-10 ml-auto">

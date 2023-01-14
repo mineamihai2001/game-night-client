@@ -1,4 +1,6 @@
+import { Color } from "../modules";
+
 const Groups = () => {
-    return <></>;
+    return <div></div>;
 };
 export default Groups;
