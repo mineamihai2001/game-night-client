@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import { Color } from "../../modules";
 
 export const Card = (props: ICardProp) => {
-    // const color = new Color().color;
-    const [color, setColor] = useState(new Color().color);
+    const color = typeof props.color === "undefined" ? new Color().color : props.color;
 
     return (
         <div
