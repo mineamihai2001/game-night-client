@@ -16,18 +16,6 @@ const members: Array<IUser> = [
     {
         username: "Member4",
     },
-    {
-        username: "Member1",
-    },
-    {
-        username: "Member2",
-    },
-    {
-        username: "Member3",
-    },
-    {
-        username: "Member4",
-    },
 ];
 
 export const GroupMembers = () => {
