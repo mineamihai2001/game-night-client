@@ -22,17 +22,12 @@ interface INight {
 }
 
 interface IPhysicalLocation {
-    type: LocationType.PHYSICAL;
+    type: "physical";
     address: string;
 }
 
 interface IOnlineLocation {
-    type: LocationType.ONLINE;
-}
-
-enum LocationType {
-    PHYSICAL = "physical",
-    ONLINE = "online",
+    type: "online";
 }
 
 /// USER
@@ -42,7 +37,11 @@ interface IUser {
 
 namespace Props {
     export interface IProps {}
-    export interface IGroupProps extends IProps {}
+    export interface IGroupProps extends IProps {
+        key: number | string;
+        color: Color.IColor;
+        details: IGroup
+    }
     export interface INightProps extends IProps {}
     export interface IGameProps extends IProps {}
     export interface IUserProps extends IProps {}
